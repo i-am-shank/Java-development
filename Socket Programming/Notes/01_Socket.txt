@@ -1,0 +1,9 @@
+Socket : 
+  ----> A Socket is an end-point of communication between 2 devices.
+  ----> Each of the devices in a network communicating, will have a socket at each of their ends. 
+  ----> In case of Java programming, each of the socket is actually a Java object.
+
+How sockets are used in communication :- 
+  ----> Sockets will be at both sender (A) & reciever end (B).
+  ----> In sending a message from a socket to another, socket's output stream is used. 
+  ----> And in recieving a message in a socket, socket's input stream is used.

@@ -1,0 +1,5 @@
+ServerSocket : 
+  ----> We will have a socket at client-side initially. And, initially there will be no socket at Server-end. It has a ServerSocket.
+  ----> Job of ServerSocket is to wait for incoming client-connections requests.
+  ----> So, socket over client-side will send a connection request to server. And, ServerSocket will accept the request. After which, a socket object is created on server-side.
+
