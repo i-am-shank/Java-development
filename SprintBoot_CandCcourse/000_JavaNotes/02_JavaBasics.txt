@@ -1,0 +1,6 @@
+-->  file name  ==  class name
+-->  1 file can only have 1 public class
+-->  class  =>  variables + methods + constructor + nested class (inner class)
+
+-->  main() is the starting point of any program
+-->  JVM calls the main-method to start the program.

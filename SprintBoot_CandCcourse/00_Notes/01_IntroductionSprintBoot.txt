@@ -1,0 +1,80 @@
+Servlet & Servlet Container :
+  -->  In 2013-2016, Servlet is used. Servlet & Servlet Container are foundation for the web applications.
+  -->  Spring & Spring boot internally uses the same concept.
+  -->  Servlet is a Java class, which handles client request, processes it & returns the response.
+  -->  Servlet container are the ones, which manages the Servlets. In an application, there are so many Servlets.
+  -->  Each servlet is mounted over an URL. And further multiple endpoints are mounted over that servlet-URL.
+  -->  1 Servlet can have only 1 doGet, doPut, doPost, doDelete methods, with 2 params (request, response). The methods are overriden for implementation.
+  -->  In Web.xml , Servlet mapping was done. It maps what all URL(s) a servlet will handle.
+  -->  When any client-request comes, it first comes to Servlet container (Tomcat). It is a server. Here only, our application is deployed.
+  -->  Servlet container uses Web.xml to determine which Servlet to invoke for that request & gets response from that Servlet.
+
+
+
+=================================
+=================================
+
+
+
+Spring framework is a family, which has lot of features. Spring boot also comes under Spring framework. Before Spring boot came, there was SpringMVC.
+
+
+Problems in Servlet, which Spring framework solved : 
+  
+  1.  Removal of Web.xml 
+    -->  This Web.xml becomes too big in a production-level application, having many Servlets. Also Web.xml holds information like filtering-logic to map requests to correct Servlets.
+    -->  Spring framework introduced Annotations based configurations.
+
+  2.  Inversion of Control (IoC)
+    -->  IoC is more flexible way to manage object dependencies & its lifecycle (through Dependency Injection).
+
+  3.  Unit Testing is much harder
+    -->  Unit Testing is a way of testing only 1 class, without invoking any other class/method of some other class.
+    -->  As object creation depends on Servlet, mocking is not easy. 
+    -->  Spring dependency injection facility makes Unit testing very easy.
+
+  4.  Difficult to Manage REST API
+    -->  Handling different HTTP methods, request parameters, path mapping make code little difficult to understand.
+    -->  Spring MVC provides an organised approach to handle the requests & its easy to build RESTful APIs.
+
+
+There are many other advantages of Spring framework like : 
+
+  -->  Lot of Integration available with other frameworks.
+  -->  This allow developers to choose different combination of technologies & framework which best fits with their requirements like : 
+    =>  Integration with Unit testing framework like : Junit or Mockito.
+    =>  Integration with Data Access framework like Hibernate, JDBC, JPA, etc.
+    =>  Integration with Asynchronous programming.
+  -->  Similary it has different integration available for : 
+    =>  Caching
+    =>  Messaging
+    =>  Security, etc.
+
+
+
+=================================
+=================================
+
+
+
+Annotations (till now) : 
+  -->  @Component
+      =>  tells Spring that, you have to manage this class or bean.
+  -->  @Autowired
+      =>  tells Spring to resolve and add this object dependency. (gives us control to mock this object creation, when needed)
+  -->  @Controller
+      =>  Labels a Java class as Controller class.
+  -->  @RequestMapping
+      =>  Tells about which URL a controller is mapped.
+  -->  @GetMapping
+
+
+
+=================================
+=================================
+
+
+
+Workflow in Spring framework : 
+  -->  Request comes to Servlet Container (Tomcat). We have to deploy our application here.
+  -->  Then request goes to DispatcherServlet (also called first-controller). 

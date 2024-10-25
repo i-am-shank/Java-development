@@ -1,0 +1,9 @@
+Why only 1 Public class in 1 Java file ? 
+(interview question)
+
+
+  -->  Main method should be inside public class. Because, JVM calls the main method to execute any program & it needs access to it.
+
+  -->  Public class name should be same as file name. Java has put this restriction, so that it doesn't face difficulty in searching main-method. And, user by any chance can't create multiple public classes.
+
+=>  Above 2 points is sufficient to prove that 1 Java file should have exactly 1 public class. Nothing more than that is possible. Or even 0 public class is not possible, as either JVM needs a public class or any other class needs a public class to invoke code inside it & make some use of it's code.

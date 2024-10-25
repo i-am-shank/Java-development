@@ -1,0 +1,89 @@
+-->  Java is static-typed language
+        =>  need to assign a datatype to every variable, whenever we create one.
+-->  Java is also a strong-typed language.
+        =>  For each datatype, there is a strict range of permitted values.
+
+
+Variable naming-convention : 
+  -->  case-sensitive
+  -->  can contain Unicode letters & digits
+  -->  can start with a letter, $ and _.
+  -->  can not be a Java reserved keyword (like: new, class, while, for, etc).
+  -->  camel case should be followed (better practice)
+  -->  for constants, name should be in CAPITAL LETTERS.
+
+
+
+=====================================================
+=====================================================
+
+
+
+Types of Variable : 
+  -->  Primitive Types
+      ==>  Boolean Types
+          *  boolean  ()
+      ==>  Numeric Types
+          ~  Integral Types
+              *  byte  (1 byte)
+              *  char  (2 bytes)
+              *  short  (2 bytes)
+              *  int  (4 bytes)
+              *  long  (8 bytes)
+          ~  Floating Types
+              *  float  (32 bits IEEE 754 value)
+              *  double  (64 bits IEEE 754 value)
+  -->  Reference Types 
+      *  Classes
+      *  Interfaces
+      *  Array
+      *  String
+      *  Enum
+
+
+####  NOTE  ####
+  -->  float & double datatypes are never used, when their is a need of precise values of decimals.
+  -->  BigInteger are used in such cases.
+
+
+
+====================================================
+====================================================
+
+
+
+Types of Conversion : 
+  -->  Widening / Automatic Conversion
+      =>  This happen from lower datatype (smaller size) to higher datatype.
+      =>  Just assign value of any lower datatype to variable of any higher datatype. It happens automatically.
+
+  -->  Narrowing / DownCasting / Explicit casting
+      =>  smaller_type_variable = (data_type) bigger_type_variable
+
+  -->  Promotion during Expression
+      =>  If we'll try to add 2 values in range, & sum get's out of range.
+      =>  Then data type of variable storing sum, automatically get's promoted to minimum suitable range (int .. generally). And we need to change the datatype to that promoted-datatype of sum-variable, to resolve syntax error.
+
+  -->  Explicit casting during Expression
+      =>  The automatic typecasting, which is happening as above promotion point. It's error can also be resolved from explicit typecasting.
+
+
+
+===================================================
+===================================================
+
+
+
+Kind of Variables :- 
+  -->  Local
+      =>  created inside any method
+  -->  Instance / member - variables
+      =>  is different of different objects created of that class.
+  -->  Static/class variable
+      =>  "static" keyword is used for it's declaration.
+      =>  can be accessed directly from class.
+      =>  this variable isn't copied on object creation.
+  -->  Method Parameters
+      =>  paramteres of any method of a class.
+  -->  Constructor Parameters
+      =>  parameters of constructor function, of a class.

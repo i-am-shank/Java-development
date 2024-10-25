@@ -1,0 +1,63 @@
+Reference Data types (Non-Primitive data types)
+  -->  There are 4 reference data-types in Java :- 
+      =>  Classes
+            ->  It holds the reference of the object, created in Heap memory.
+
+      =>  String
+            ->  Inside Heap memory, there is something called String Constant Pool.
+            ->  There is a concept called String literals. What is it ?
+            ->  Strings are immutable. Once created it can't be changed. 
+            ->  If we try to assign a different value to a string variable, it will store that new value at a new location in String Constant pool & that variable will hold reference to this new memory location.
+            ->  String variables hold reference to either String literals inside String Constant Pool in Heap memory, or to String objects in Heap memory.
+
+      =>  Interface
+            ->  Interface is like a blueprint. Inside it, methods are declared (not defined).
+            ->  Child classes implement interfaces, also defining/overriding Interface methods in the process.
+            ->  Objects are created of that classes, but the datatypes of Object is the Interface.
+            ->  Objects are stored in heap memory, & the reference to that memory is stored in the Interface-type variable.
+
+      =>  Array
+            ->  Array is a datatype, which stores values of the same datatype.
+            ->  In arrays also, memory allocation happens in heap memory of the size initially assigned to array, & the variable stores only the reference.
+            ->  Arrays can be either 1D or 2D.
+            ->  int []arr = new int[5];
+            ->  int arr[] = new int[5];
+            ->  int arr[] = {1, 2, 3, 4, 5};
+            ->  In all of the above declaration, memory assignment happens in similary way.
+
+
+
+####  NOTE  ####
+  -->  In Java, there is no concept of pass by reference. There is only pass by value.
+  -->  In Java, there is no concept called Pointer.
+
+
+
+Wrapper Classes (Autoboxing and Unboxing)
+  -->  For each primitive type (8 types), there are corresponding Reference types / Wrapper class.
+  -->  Primitive types & Reference types : 
+      =>  int      --   Integer
+      =>  char     --   Character
+      =>  short    --   Short
+      =>  byte     --   Byte
+      =>  long     --   Long
+      =>  float    --   Float
+      =>  double   --   Double
+      =>  boolean  --   Boolean 
+  -->  Advantages of using reference types :- 
+      =>  for reference capabilities (as there isn't any pass by reference in Java).
+      =>  Java Collections (ArrayList, HashMap). They work only on reference data-types, not on primitive data-types.
+  -->  Autoboxing :- 
+      =>  int a = 10;
+      =>  Integer a1 = a;    //  primitive to Wrapper
+      =>  This conversion is called Autoboxing.
+  -->  Unboxing :- 
+      =>  Integer x = 20;
+      =>  int x1 = x;    //  Wrapper to primitive
+      =>  This conversion is Unboxing.
+
+
+Constant variables
+  -->  "final" keyword is used to declare constant variables.
+  -->  can also use "final" keyword with "static" keyword.
+  -->  Ex : final int varName = 7;

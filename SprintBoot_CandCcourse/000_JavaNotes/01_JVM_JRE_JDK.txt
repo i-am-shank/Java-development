@@ -1,0 +1,43 @@
+Java
+  -->  platform independent, Object oriented programming language.
+  -->  portable (WORA - Write Once Run Anywhere) , because of JVM.
+
+
+
+3 main components :  (upper one is component of lower ones)
+
+  **  JVM  (Java Virtual Machine)
+        =>    Java program   ---Compiler--->   ByteCode (.class file)
+            ------->  javac fileName.java
+              ByteCode   ---JVM--->   Machine Code
+              Machine Code   ---CPU--->   Output
+            ------->  java className
+        =>  Platform dependent  (it has JIT, i.e. Just-in-time compiler).
+        =>  Any JVM can read any ByteCode. That's why it contributes in portability of Java. 
+
+  **  JRE  (Java Runtime Environment)
+        =>  It has JVM & class libraries (java.Math , java.util , etc.).
+        =>  In ByteCode, there are some libraries used. First that code snippets are resolved by class libraries. Then JVM converts that resolved code to Machine Code.
+        =>  With JRE, any ByteCode can be run. But we can't write the code using JRE. For that we need JDK.
+
+  **  JDK  (Java Development Kit)
+        =>  With JDK, we get a programming language, compiler, & debugger.
+        =>  JDK  ==  JRE  +  (Java + compiler + debugger + etc.)
+        =>  That's why, we only need to download JDK in our system.
+
+
+####  NOTE  ####
+  JVM, JDK, JRE  -->  all 3 are platform dependent. But, ByteCode is platform independent.
+
+
+
+JSE  (Java Standard Edition)
+  -->  It is nothing but Core Java. 
+  -->  Things like, classes, objects, multithreading, etc. belong to this only.
+
+JEE  (Java Enterprise Edition)
+  -->  JEE  ==  JSE  +  APIs (like Transactional API (Rollback, commit), Persistence API , Servlets, JSP (Java Server Pages)).
+  -->  It is generally used to build large scale application like E-commerce.
+
+JME  (Java Mobile/Micro Edition)
+  -->  It provides APIs for mobile application. (resource constraints).

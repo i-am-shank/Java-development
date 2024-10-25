@@ -1,0 +1,37 @@
+How Float and Double values are stored in memory ?
+
+Float (32 bits IEEE 754)
+
+  -->  1 bit (Sign  ..  0 -> +ve  ,  1 -> -ve)
+  -->  8 bits (Exponent) 
+  -->  23 bits (Mantissa / Significand)
+
+
+Float to Stored format :- 
+  1. Convert no. to Binary
+      4.125
+          4  ->  100
+          .125  ->  .001
+      4.125  ->  100.001
+  2. Make it in form of 
+      (1.xxx)  *  (2 ^ Exponent)
+      100.001  ->  1.00001  *  (2 ^ 2)
+                 Mantissa (00001  ..  digits after decimal)
+  3. Add bias to Exponent
+      for float, bias = 127  (8 bits)
+      127 + 2 = 129  (10000001)
+  4. Get Sign-bit , Exponent-bits , & Mantissa (from left to right bits .. leave remaining 0)
+    4.125f  =  0 | 10000001 | 00001000000000000000000
+
+
+Stored format to float :- 
+  No.  =  ((-1) ^ sign-bit)  *  (1 + Mantissa)  *  (2 ^ (Exponent - 127))
+    
+    sign-bit = 0
+    Mantissa = .00001 = (1 / (2^5))
+    Exponent = 129
+  No.  =  ((-1) ^ 0)  *  (1 + (1 / (2^5)))  *  (2 ^ (129 - 127))
+       =  (1)  *  (1 + (1/(2^5)))  *  (2 ^ 2)
+       =  (1)  *  (1 + .03125)  *  4
+       =  (4  *  (1.03125))
+       =  4.125
