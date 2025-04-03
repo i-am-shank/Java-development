@@ -1,0 +1,87 @@
+Methods :-
+  -->  Method is used to perform certain task.
+  -->  It can be used to bring code readability & re-usability.
+
+
+
+Components of method-syntax :- 
+  Ex  :  public int sum(int a, int b) throws Exception { ... }
+
+  -->  Access Specifier : 
+      =>  Public  :  can be accessed through any class in any package.
+      =>  Private  :  can be accessed by methods only in same class.
+      =>  Protected  :  can be accessed by other classes in same package or other sub-classes (child classes .. inherited class) in different package.
+      =>  Default  :  can be accessed only by classes in same package. If no access specifier provided, this is applied.
+
+  -->  Return Type : 
+      =>  tells, what the method is going to return.
+      =>  methods do not returning anything, has "void" return-type.
+      =>  Use class-name OR primitive data-types as return-type of any method.
+
+  -->  Method name :
+      =>  it should start with small-letter & follow camel-case in case of multiple words.
+
+  -->  Parameters : 
+      =>  It's a list of variables, that are used in method.
+      =>  It can be blank too.
+  
+  -->  throws Exception : 
+      =>  It generally tells, if the method is going to throw any Exception or not.
+
+
+
+####  NOTE  ####
+  -->  Package :
+      =>  In simple words, it's just a directory inside source root, containing some java-files.
+      =>  Package is like a collection of similar classes. It's like a group of classes.
+
+
+===============================================
+===============================================
+
+
+Types of Method : 
+  -->  System Defined Method : 
+      =>  Methods which are already defined & ready to use in Java like Math.sqrt()
+
+  -->  User Defined Method :
+      =>  Methods which programmer creates based upon the program necessity. 
+
+  -->  Overloaded Method : 
+      =>  More than one method with same name, created in same class.
+      =>  Overloaded methods are differentiated by data-type of arguments & no. of arguments, & not by return-type.
+      =>  Static binding (i.e. at compile-time, it will know which method to call).
+      =>  It is a type of polymorphism.
+
+  -->  Overridden Method : 
+      =>  Subclass has the same method as the parent class.
+      =>  Overridden methods are same, i.e. same return type, same arguments, same name. Just the method-body can be changed, as per need.
+      =>  Dynamic binding (i.e. at runtime, it will know which method to call).
+      =>  It is also a type of polymorphism.
+
+  -->  Static Method : 
+      =>  These methods are associated with the class.
+      =>  Can be called just with class name.
+      =>  Static methods can't access non-static instance variables & methods.
+      =>  Static methods can't be overridden.
+      =>  When to declare method static : 
+        ->  Methods which don't modify state of object, can be static.
+        ->  Utility methods, which don't use any instance variable & compute only on arguments can be static.
+      =>  Ex. : Factory design pattern
+
+  -->  Final Method : 
+      =>  Final methods can't be overridden in Java. Because, final methods means it's implementation can't be changed. If child class can't change it's implementation, then no use of overridden.
+
+  -->  Abstract Method : 
+      =>  It's defined only in Abstract classes.
+      =>  Only method declaration is done.
+      =>  It's implementation is done in child classes.
+
+
+Variable arguments : 
+  -->  We might need variable no. of arguments in a method.
+  -->  For such situations, we can use this type of argument.
+  -->  Ex :  public static int sum(int ...variable) 
+  -->  In above example, variable becomes a list of integer. We can loop over variable.
+  -->  Only 1 argument can be present in a method.
+  -->  Variable argument should be the last argument of any method.

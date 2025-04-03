@@ -1,0 +1,160 @@
+Generic Class :- 
+  -->  Classes which aren't child class of any class, i.e. sub-class of Object-class.
+  -->  Generic class are classes, which helps to avoid using the Object-class. Instead they use templates.
+  -->  Ex : data-type of value, will be determined at compile time.
+      public class Print<T> {
+        T value;
+        public T getPrintValue() {
+          return value;
+        }
+        public void setPrintValue(T value) {
+          this.value = value;
+        }
+      }
+      Print<Integer> printObj = new Print<Integer> ();
+      printObj.setPrintValue(1);
+      Integer output = printObj.getPrintValue();
+  -->  Generic Type (in above example <T>) can be any non-primitive type / object / interface / .. .
+  -->  Inheritance is also possible with generic classes : 
+      1.>>  Non-Generic Subclass : 
+          Ex:  public class myPrint1 extends Print<String> {
+            //  .. class body ..
+          }
+          myPrint1 obj1 = new myPrint();
+      2.>>  Generic Subclass : 
+          Ex:  public class myPrint2<T> extends Print<T> {
+            //  .. class body ..
+          }
+          myPrint2<String> obj2 = myPrint2<String> ();
+  -->  Generic class can also have multiple Generic-types. Ex: 
+      public class Pair<K,V> {
+        private K key;
+        private K value;
+        public void put(K key, V value) {
+          this.key = key;
+          this.value = value;
+        }
+        public K getKey() {
+          return key;
+        }
+        public V getValue() {
+          return value;
+        }
+      }
+      Pair<String, Integer> pairObj = new Pair<>();
+      // in R.H.S, it's optional to specify types of generic-types.
+      pairObj.put("hello", 1234);
+
+
+
+===============================================
+
+
+
+Generic Method :- 
+  -->  We can also make a method Generic, & not the complete class.
+  -->  Type Parameter should be before the return type of method declaration.
+  -->  Type Parameter scope is limited to method only.
+  -->  Ex: assume that below code is linked to above example Pair<K.V> class.
+      public class GenericMethod {
+        public <K,V> void printValue(Pair<K,V> pair1, Pair<K,V> pair2) {
+          if(pair2.getKey().equals(pair1.getKey())) {
+            // .. do something ..
+          }
+        }
+      }
+
+
+
+===============================================
+
+
+
+Raw Type : 
+  -->  It's a name of the generic class or interface without any type argument.
+  -->  It happens while creating an object of a Generic class with some generic-type without specifying it at the object creation.
+  -->  Ex:  
+      public class Print<T> {
+        T value;
+        public T getPrintValue() {
+          return value;
+        }
+        public void setPrintValue(T value) {
+          this.value = value;
+        }
+      }
+        // parametrized-type object
+      Print<String> obj1 = new Print<>();
+        // internall it passes Object-class as parametrized type.
+      Print rawTypeObj = new Print();
+        // can pass any type to rawTypeObj (in setPrintValue() funct argument)
+
+
+
+===============================================
+
+
+
+Bounded Generics :
+  -->  It is the concept of binding the Generic-types, i.e. restricting it to few eligible types.
+  -->  Bounded Generics are of 2 types : 
+      1.>>  Upper Bound
+      2.>>  Multi Bound
+
+  -->  Upper Bound : 
+      =>  <T extends Number>  ..  replace this in place of <T>
+      =>  .. means T can be of type Number or its Subclass only.
+      =>  In above example, Super-class is Number. Super-class can be interface too.
+      =>  Child classes of Number : 
+          ->  Byte
+          ->  Short
+          ->  Integer
+          ->  Float
+          ->  Double
+          ->  Long
+          ->  BigInteger
+          ->  BigDecimal
+          ->  ..  ..  etc.
+  -->  Multi Bound : 
+      =>  <T extends Superclass & interface1 & interface2>
+      =>  First one is required to be a concrete class, after that interfaces can be there.
+      =>  And all conditions are required to be fulfilled.
+      =>  Ex : 
+          public class A extends ParentClass implements Interface1, Interface2 {
+            // ..class A implementation..
+          }
+          public class Print <T extends ParentClass & Interface1 & Interface2> {
+            T value;
+          }
+
+
+
+===============================================
+
+
+
+Wildcards : 
+  -->  There are 3 types of wildcards : 
+      1.>>  Upper bounded wildcard : 
+          =>  <? extends UpperBoundedClassName>
+          =>  allowed types are className & below
+      2.>>  Lower bounded wildcard :
+          =>  <? Super LowerBoundClassName>
+          =>  allowed types are className & above
+      3.>>  Unbounded wildcard : 
+          =>  <?>
+          =>  It offers flexibility for Object-class & all it's child types.
+
+
+
+===============================================
+
+
+
+Type Erasure : 
+  -->  Whatever code is written, when bytecode (.class file) is generated. It is replaced with actual types (in place of Generic / unknown types).
+  -->  <T>  :  is replaced by Object-class (for example)
+  -->  <T extends Number>  :  is replaced by Number (another example)
+  -->  Types of Type Erasure : 
+      1.>>  Generic Method Erasure 
+      2.>>  Generic Bound Type Method 

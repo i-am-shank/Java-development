@@ -1,0 +1,20 @@
+Unit testing
+	->  It is a way to test the smallest part of the code, such as individual methods or classes, to ensure they work as expected
+
+Why Unit testing ? 
+	->  Fast feedback
+	->  Early bug detection
+	->  Easier to maintain
+	->  Increases confidence
+
+Application
+	->  Controllers
+	  ->  ControllerTest
+	->  Services
+	  ->  ServiceTest
+	->  Repos
+	  ->  RepoTest
+
+Code-coverage of unit tests :
+	->  How much of the code is covered in unit tests is called Code-coverage. This is analysed by some tools like Sonar, etc.
+

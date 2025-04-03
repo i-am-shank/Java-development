@@ -1,0 +1,131 @@
+Types of classes (in Java) :- 
+  1. Concrete class
+  2. Abstract class
+  3. Super class and Sub class
+  4. Object class
+  5. Nested class
+      -->  Inner class (Non Static Nested class)
+      -->  Anonymous Inner class
+      -->  Member Inner class
+      -->  Local Inner class
+      -->  Static Nested class / Static class
+  6. Generic class
+  7. POJO class
+  8. Enum class
+  9. Final class
+  10. Singleton class 
+  11. Immutable class
+  12. Wrapper class
+
+
+
+------------------------------------------------
+
+
+
+====================================
+1. Concrete Class :
+====================================
+
+  -->  classes, of which we can create instance using "new" keyword.
+  -->  All methods in this have implementation.
+  -->  It can be a child class or extends an abstract class.
+  -->  class access modifier can be "public" or "package private" (this is default access modifier).
+
+
+
+====================================
+2. Abstract Class
+====================================
+
+  -->  Show only important features, hiding it's internal implementation.
+  -->  2 ways to achieve abstraction : interface , "abstract"-keyword. Interface is 100% abstraction, but abstract-classes has 0 to 100% abstraction.
+  -->  This isn't about interface, but classes declared with "abstract"-keyword (as prefix)
+  -->  We can't create an instance of this class.
+  -->  Classes extending these abstract classes, implement the abstract-features (methods), @Override annotation.
+  -->  Constructors can be created in them. And from "super" keyword, child classes can access them.
+  -->  An "abstract"-class can also extend another "abstract"-class. In this case, either it can provide implementation of parent's abstract method, or it can add another abstract methods to it.
+  -->  If a concrete class extends an abstract class, it will implement all the abstract methods of parent class.
+
+
+
+====================================
+3. Super class and Sub class :
+====================================
+
+  -->  A class derived ("extends"-keyword) from another class is called Sub class. 
+  -->  And the class from which Sub class is derived is Super class.
+  -->  In Java, by-default there is a super-class "Object", which is parent of all those classes, which don't have any parent class.
+  -->  "Object"-class has some common methods like clone(), toString(), equals(), notify(), wait(), etc. (notify() & wait() are used in threads.)
+
+NOTE : Any instance of child classes can be stored in variables of their parent class. So, variable of Object-class can store instance of any class (if their instance can be created, i.e. not an abstrat class).
+
+
+
+====================================
+4. Nested class
+====================================
+
+  -->  Class within another class is called Nested class.
+  -->  It is created, when we are sure that the nested class will be used only by it's parent class, & no-where else. It helps in grouping logically related classes in 1 file.
+  -->  It's scope is same as of it's outer class.
+  -->  Nested class is of 2 types :- 
+      (1.)  Static Nested Class
+      (2.)  Non-Static Nested Class (also called Inner class)
+          i.  Member Inner class
+          ii.  Local Inner class
+          iii.  Anonymous Inner class
+
+
+***************************
+*   Static Nested class   *
+***************************
+
+  -->  It doesn't have access to non-static instance variable & non-static method of outer class.
+  -->  It's object can be initiated without initiating object of outer class.
+    Ex:  OuterClass.NestedClass nestedObj = new OuterClass.NestedClass();
+  -->  It can have any of the access-modifiers.
+      =>  Public  :  object of nested class can be created anywhere.
+      =>  Private  :  object of nested class can be created within parent class itself, or we can create a public method of parent class & create object of nested class in that method.
+      =>  
+
+**********************************
+*    Non-Static / Inner class    *
+**********************************
+
+  -->  It has access to all instance variables & methods of outer class.
+  -->  It's object can be initiated after initiating the object of outer class.
+
+
+  i.>  Member Inner class : 
+      -->  It can be private / public / protected / default.
+      -->  To create it's object, we need object of outer class. And using parent's object, we can create object of inner class.
+
+  ii.>  Local Inner class : 
+      -->  If we're creating this inner class inside a block inside the parent's class, i.e. inside a method / loop / conditional statement block.
+      -->  It can only be of default access modifier type.
+      -->  It object can't be created outside of this block, in which class is present. If that block is a method, can call that method out of parent class.
+
+NOTE : Inheritance is also possible in nested class.
+    1.>>  Nested class can be inherited to another nested class inside same parent class.
+    2.>>  A static nested class can be inherited to another class, out of it's parent class.
+    3.>>  An non-static nested class can be inherited to another class, using super() keyword in constructor. This is slightly complex.
+NOTE : These inheritance aren't used practically much.
+
+  iii.>  Anonymous Inner class : 
+      -->  An inner class without a name falls in this category.
+      -->  This happens by creating an abstract class's object & implementing it's abstract methods at the same line when creating their object.
+      Ex. : 
+      public abstract class Car {
+        public abstract void abstractMethod();
+      }
+      Parent pobj = new Parent() {
+        @Override 
+        public void abstractMethod() {
+          // comment 1
+          System.out.println("implemented");
+        }
+      }
+      -->  2 things happened behind the scene : 
+          =>  Sub-class is created, when we're trying to create object of abstract class, which isn't directly possible, i.e. behind the scene, it is inheriting that abstract class into another class, creating it's object whose name is decided by compiler.
+          =>  Creates an object of Sub-class, & assign it's reference to object.

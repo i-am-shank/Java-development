@@ -1,0 +1,72 @@
+Constructor : 
+  -->  It is used to create an instance & also used to initialise the instance variable.
+  -->  It's similar to method except : 
+      =>  Name  :  Constructor name is same as Class name
+      =>  Return type  :  Construct do not have any return type
+      =>  Constructor can't be static or final or abstract, synchronized.
+
+
+
+####  NOTE  ####
+  -->  "new" keyword tells Java at runtime, to call the constructor of the class, & not any other method by the same name.
+
+
+
+FAQ  (interviews) :- 
+  1.  Why constructor do not have return type ?
+        -->  Because in that way, it's uniquely itentifiable. A method can have return type of the class-object OR if a method doesn't have default return type, it is of void return type. But constructor is different !
+
+  2.  Why constructor can not be final ?
+        -->  final means method can't be overriden.
+        -->  Because classes are also inherited, & in that process, constructor aren't inherited to child class as in child class it is of a different name than class & will be considered a method. 
+        -->  Also child class might have some other variables & constructor might be needed to be overridden in such cases.
+
+  3.  Why constructor can not be abstract ?
+        -->  For an abstract method, abstract class is needed. And in abstract class, methods are declared only, not defined (defined by child classes).
+        -->  And child class doesn't have access to constructors, so they can't implement them.
+        -->  So, there is a chaos. That's why constructors can't be abstract.
+
+  4.  Why constructor can not be static ?
+        -->  As constructor is also used to initialise instance variables.
+        -->  If constructor is defined as static, then it can only access static variables & can't initialise instance variables (if there exist one).
+        -->  If constructor is static, then we won't be able to use "super".
+
+  5.  Can we define constructor in interface ?
+        -->  In interface, only method declaration are there. Child classes implement the methods.
+        -->  But child classes can't access parent constructor, so theoretically not possible to implement the constructor in child class.
+        -->  And we can't create an object of interface. So, there isn't any need of constructor in interface.
+
+  6.  Why constructor name is same as of class name ?
+        -->  Because it's easily indentifiable, among 100 methods also.
+
+
+
+====================================================
+====================================================
+
+
+
+Types of Constructor : 
+  -->  default constructor
+      =>  by-default, it is provided by Java
+      =>  sets default values for all the instance variables.
+
+  -->  No argument constructor
+      =>  It is same as default constructor, but this time it's manually defined.
+      =>  Defining it will remove the default constructor.
+
+  -->  Parametrized constructor
+      =>  A constructor with some parameter.
+      =>  Defining it will remove the default constructor.
+
+  -->  Constructor Overloaded
+      =>  Multiple constructor, with different parameters.
+
+  -->  Private Constructor 
+      =>  means no-body will be allowed to call the constructor & create an object of this class, outside the class.
+      =>  only the class has access to the constructor. 
+      =>  It's method can call the constructor. If we make that method static, then out of the class, that method can be called to access constructor.
+
+  -->  Constructor chaining
+      =>  this
+      =>  super

@@ -1,0 +1,105 @@
+IoC (Inversion of Control) :- 
+  -->  Typically we have the control of creating objects.
+  -->  But if this control goes to the client-side, it is called Inversion of Control
+  -->  This can be achieved using Dependency Injection.
+  -->  IoC is a Principle & Dependency-injection is a design pattern.
+
+
+
+----------------------------------------------
+Without using Dependency-injection : 
+----------------------------------------------
+
+public class Controller {
+  private Service service;
+
+  public void handleRequest() {
+    service.doSomething();
+  }
+}
+
+public class Service {
+  public void doSomething() {
+    System.out.println("Doing some work");
+  }
+}
+
+==============================================
+
+
+
+Types of Dependency Injection :
+
+
+----------------------------------------------
+1. Constructor Injection
+----------------------------------------------
+
+public class Controller {
+  private Service service;
+
+  public Controller(Service service) {
+    this.service = service;
+  }
+
+  public void handleRequest() {
+    service.doSomething();
+  }
+}
+
+public class Service {
+  public void doSomething() {
+    System.out.println("Doing some work");
+  }
+}
+
+==============================================
+
+
+
+----------------------------------------------
+2. Setter Injection
+----------------------------------------------
+
+public class Controller {
+  private Service service;
+
+  public void setService(Service service) {
+    this.service  = service;
+  }
+
+  public void handleRequest() {
+    service.doSomething();
+  }
+}
+
+public class Service {
+  public void doSomething() {
+    System.out.println("Doing some work");
+  }
+}
+
+==============================================
+
+
+
+----------------------------------------------
+3. Field Injection  (loose coupling)
+----------------------------------------------
+
+public class Controller {
+  @Autowired
+  private Service service;
+
+  public void handleRequest() {
+    service.doSomething();
+  }
+}
+
+public class Service {
+  public void doSomething() {
+    System.out.println("Doing some work");
+  }
+}
+
+==============================================

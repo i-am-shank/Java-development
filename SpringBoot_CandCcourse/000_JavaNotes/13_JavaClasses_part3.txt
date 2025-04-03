@@ -1,0 +1,53 @@
+POJO Class :- 
+  -->  POJO  ==  "Plain Old Java Object".
+  -->  Contains variables and getter & setter methods for all variables.
+  -->  Class should be public.
+  -->  Should have Public default constructor.
+  -->  No annotations should be used like @Table, @Entity, @Id etc.
+  -->  It should not extend any class OR implement any interface.
+  -->  POJO use cases :- 
+      =>  When a request object comes to server, it is good practice to don't use that request object much. So, the request object parameters are converted to a POJO object & that POJO object is used at multiple instances, wherever needed.
+      =>  Request comes & goes through controller, then services (business logic), then repository. So, in repositories, POJO is created (entity objects of db). And then it is stored in db.
+
+
+
+===============================================
+
+
+
+Enum Class :- 
+  -->  It has a collection of CONSTANTS (constant value variables).
+  -->  It's CONSTANTS are static & final implicitly (don't need to specify this).
+  -->  It can't extend any class, as it internally extends java.lang.Enum class.
+  -->  It can implement interfaces.
+  -->  It can have variables, constructor, methods.
+  -->  It can't be initiated (as constructor of them are private, even if we make them default, it'll be private in bytecode).
+  -->  No other class can extend Enum class.
+  -->  It can have abstract method, & all the constant should implement that abstract method.
+
+  -->  Normal Enum Class : 
+      public enum WeekDays {
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY,
+        THURSDAY,
+        FRIDAY,
+        SATURDAY,
+        SUNDAY;
+      }
+  -->  Enum with Custom Values
+  -->  Method Override by Constants
+  -->  Abstract method in Enum 
+  -->  Interface implementation in Enum 
+  -->  What's the advantage of Enum class
+
+
+
+===============================================
+
+
+
+Final Class :- 
+
+
+// start from 12:00 duration

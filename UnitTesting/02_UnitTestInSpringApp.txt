@@ -1,0 +1,19 @@
+Spring boot by default has imported :- 
+	->  junit
+	->  mockito
+
+@Test - annotation
+	->  comes from org.junit.jupiter.api
+
+
+@Mock - annotation
+	->  helps to create a mock-object (of service/repository), instead of them being null
+	->  But for that, the test class should extend MockitoExtension class.
+
+@ExtendWith(MockitoExtension.class)
+	->  This annotation is needed for the test class, to make @Mock create mock-objects successfully.
+	->  Without this, even with @Mock annotation, the object will remain uninitialised.
+
+@InjectMocks - annotation
+	->  Added to objects which need some another @Mock - object as dependency to be injected to them.
+	->  If @Mock is used instead of this, that dependency injection won't happen

@@ -1,0 +1,18 @@
+-->  In some cases, we have let's say 1000 classes, but objects of all those classes aren't needed.
+-->  In config-file (pom.xml), we can tell which classes to make objects of.
+-->  SpringBoot does some pre-requisite setup over the top of Spring Framework.
+
+
+.war  =>  Web Archive
+  -->  When an application needs to be deployed on cloud, a .war file is needed.
+  -->  Then that .war file is pushed to Apache Tomcat, to run it.
+
+SpringBoot gives advantage to create a .jar file =>  Java Archive
+  -->  But we can't run a .jar file on Tomcat.
+  -->  So, SpringBoot project doesn't need an external Tomcat, it itself has an embedded Tomcat.
+
+SpringBoot has some disadvantage also, over Spring Framework
+  -->  SpringBoot follows convention over configuration.
+  -->  Spring Framework does a lot of configuration, but SpringBoot gives all of them as pre-loaded (whenever needed).
+  -->  But in above process, it also gives a lot of things, which aren't needed (dependencies of dependencies, & related stuffs)
+  -->  Also a debatable point, if more control is needed, Spring framework is better.

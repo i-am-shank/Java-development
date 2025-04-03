@@ -1,0 +1,66 @@
+2 types of memory :- 
+
+  -->  Stack memory : 
+      =>  Store temporary variables & separate memory for methods.
+      =>  stores primitive data-types.
+      =>  stores reference of heap objects :- 
+          -->  strong reference
+          -->  weak reference 
+                ->  Soft reference
+      =>  Each thread has its own stack memory. Therefore multiple copies of stack can exist simultaneously.
+      =>  When stack memory goes full, it throws "java.lang.StackOverflowError"
+
+  -->  Heap memory : 
+      =>  Stores objects
+      =>  There is no order of allocating the memory.
+      =>  Heap memory is shared with all the threads.
+      =>  Heap memory also contains the "String Pool".
+      =>  When Heap memory goes full, it throws "java.lang.OutOfMemoryError".
+      =>  Heap memory is further divided into : 
+          -->  Young Generation (minor GC happens here)
+                ->  Eden
+                    =>  Everytime new objects are created inside Eden only.
+                ->  Survivor
+                    =>  These are the spaces, where swept objects are kept (along with their ages).
+                    =>  Types of Survivors : 
+                        ->  S0
+                        ->  S1
+          -->  Old/Tenured Generation (major GC happens here)
+                ->  It stores the promoted objects.
+          -->  Permanent Generation (NonHeap / Meta-space .. in old Java versions, this is called Permanent Generation)
+                ->  It stores class-variables (i.e. static variables).
+                ->  It stores class metadata (i.e. the info from which objects can be created).
+                ->  It stores constants (i.e. static final variables).
+                ->  As soon as JVM needs to load any class, it loads it here. And if a class isn't needed anymore, it is removed from here.
+                ->  In older versions, when this was Permanent generation, it was a part of heap memory only. And, it was non-expandable. So, the heap-full error happens, when it get's full.
+                ->  In newer versions, it is out of heap memory. And, it is expandable as needed. That's the major difference.
+
+
+
+####  NOTE  ####
+  -->  Both Stack & Heap are created by JVM & stored in RAM.
+
+
+
+======================================================
+======================================================
+
+
+
+Garbage Collector :- 
+  -->  Garbage Collector is used to delete the unreferenced objects from the heap.
+
+  -->  Mark & Sweep Algorithm
+      =>  In 1st step, it marks all the objects (in Eden or Survivors, of Young generation) which has no existing reference & are allowed to be deleted.
+      =>  In 2nd step, sweep algo removes the marked objects from the memory.
+      =>  In 2nd step continued, sweep algo also sweeps all the surviving objects from Eden into one of the Survivor-spaces (i.e. S0 or S1). And, swaps the survivor of the surviving objects (i.e. if they were in S0, gone to S1, & vice versa) , also increasing their ages in the process.
+      =>  At any instance, only one of the survivors has all the surviving objects stored.
+      =>  Also, an age is added to the swept objects, i.e. their age is increasing. This whole process is called Minor GC. It happens very fast & periodically.
+      =>  There is a threshold age defined. After reaching which, the survivors are promoted, i.e. those objects are moved to Old/Tenure Generation.
+      =>  In old generation, objects stored are frequently used & there might be so many references of them. Therefore, process of Garbage collection is more time-taking in old generation w.r.t. young generation.
+
+  -->  Types of Garbage collector (GC) : 
+      =>  Single GC 
+      =>  Parallel GC 
+      =>  CMS (Concurrent Mark Sweep)
+      =>  G1 

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="13e4a0a6-0ad8-47fb-8cbc-6c2749331929" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/.idea/00_Codes.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/00_JVM_JDK_JRE_intro/firstProgram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/00_JVM_JDK_JRE_intro/firstProgram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/01_Variables/Company.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/01_Variables/Company.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/01_Variables/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/01_Variables/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/01_Variables/dataTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/01_Variables/dataTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/01_Variables/floatDoubleVariables.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/01_Variables/floatDoubleVariables.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/01_Variables/kindOfVariables.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/01_Variables/typesOfConversion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/01_Variables/typesOfConversion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/.idea/02_Variables2_NonPrimitiveTypes.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/arrays/oneDimentionalArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/arrays/oneDimentionalArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/arrays/twoDimArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/arrays/twoDimArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/classes/classDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/classes/classDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/classes/classDemoHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/classes/classDemoHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/constantVariables/constVars.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/constantVariables/constVars.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/interfaces/interfaceDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/interfaces/interfaceDemo2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/interfaces/interfaceUse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/interfaces/myInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/strings/stringDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/strings/stringDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/wrapperClasses/wrapperClassDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/00_Codes/02_variables2_non_primitive_types/wrapperClasses/wrapperClassDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/01_JVM_JRE_JDK.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/02_JavaBasics.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/03_WhyOnly1PublicClass.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/04_Variables.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/05_Float_Double_variables.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/000_JavaNotes/06_Variables2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/00_Notes/01_IntroductionSprintBoot.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/01_FirstProject/Project1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/01_FirstProject/Project1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/01_FirstProject/Project1/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/01_FirstProject/Project1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/01_FirstProject/Project1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SprintBoot_CandCcourse/01_FirstProject/Project1/pom.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="2qYcFgY0diDuCgAnyLneErKYQza" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/shash/OneDrive/Documents/GitHub/Java-development/SpringBoot_yt/02_telusko/01_firstProject/firstProject/firstProject"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13e4a0a6-0ad8-47fb-8cbc-6c2749331929" name="Changes" comment="" />
+      <created>1734842847052</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734842847052</updated>
+    </task>
+    <servers />
+  </component>
+</project>

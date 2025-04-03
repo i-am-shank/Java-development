@@ -1,0 +1,14 @@
+Client   <-->   layers   <-->   DB
+
+layers (CSR)  :  (Client-side to DB-side)
+  1. Controller  =>  interacts with client-request
+  2. Service  =>  do any business logic
+  3. Repository  =>  connect the database
+
+All 3-layers are classes.
+
+
+
+In following OOPs, if we want to work with service inside controller class, then we have to create an object of that service inside controller class.
+Same thing applies for Service & Repository.
+
